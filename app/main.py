@@ -6,6 +6,7 @@ from app.api.auth import router as auth_router
 from app.api.tenants import router as tenant_router
 from app.api.companies import router as company_router
 from app.api.company_signals import router as company_signal_router
+from app.api.icp_profiles import router as icp_profiles_router
 
 
 app = FastAPI(
@@ -26,6 +27,7 @@ def root():
 
 app.include_router(auth_router)
 app.include_router(tenant_router)
+app.include_router(icp_profiles_router)
 app.include_router(company_router)
 app.include_router(company_signal_router)
 
